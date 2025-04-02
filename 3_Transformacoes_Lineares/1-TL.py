@@ -7,14 +7,14 @@ from pylab import*
 def T(x,y):
     return quiver(0,0,-y,x, scale_units='xy', angles='xy', scale=1)
 
+def vetor(x,y):
+    return quiver(0,0,x,y, scale_units='xy', angles='xy', color='b', scale=1)
+
 fig = figure(figsize=(10,10))
 
-T(-1,2)  # = (-2,-1)
-T(-1,-2) # = (2,-1)
-T(1,2)
-T(1,-2)
-T(1,0) # = T(e1)
-T(0,1) # = T(e2)
+vetor(-1,2) # vetor 
+T(-1,2)  # T transforma o vetor (-1,2) em T(-1,2) = (-2,-1) 
+
 xlim(-5,5)
 ylim(-5,5)
 grid()
